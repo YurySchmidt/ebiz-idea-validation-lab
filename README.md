@@ -8,7 +8,7 @@ Generate business ideas with structured AI-assisted brainstorming, validate them
 
 ## Author
 
-Yury Kovalenko, Former technical sales, now training as a business analyst.
+Yury Kovalenko. Former technical sales, now training as a business analyst.
 Course: Electronic Business, 2026.
 
 ## Approach
@@ -37,12 +37,19 @@ Blue Ocean Strategy, SCAMPER, Inversion, Cross-industry analogies, First princip
 
 Wordstat returns absolute query counts, while Google Trends returns a relative 0-100 index, so the two cannot be added directly. Both series are first normalized to a common scale and then combined using the formula defined in `02-demand-data/method.md`.
 
+## Automation
+
+A small Python script (pandas) will normalize Google Trends and Yandex Wordstat exports and merge them into one table. See `automation/`.
+
+n8n workflows may be added later if a repeatable step appears (for example, pushing results to a spreadsheet).
+
 ## Repository structure
 
 - `01-brainstorm/` - raw ideas, synthesis, shortlist
 - `02-demand-data/` - queries, exported data, normalization, analysis
 - `03-pitch/` - slides for the stakeholder presentation
 - `methods/` - short notes on the methods used (own words, no third-party course material)
+- `automation/` - Python script for combining demand data
 
 ## Data sources and limitations
 
